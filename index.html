@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td id="name1"></td>
+            <td id="lname1"></td>
+            <td id="age1"></td>
+        </tr>
+        <tr>
+            <td id="name2"></td>
+            <td id="lname2"></td>
+            <td id="age2"></td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById("age1").innerHTML = Math.floor((Math.random()*100)+1);
+        document.getElementById("age2").innerHTML = Math.floor((Math.random()*100)+1);
+    </script>
+
+    <script type='text/javascript'>
+        consonnants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm','n', 'p', 'r', 's', 't', 'th', 'v', 'x', 'z'];
+        vowels = ['a', 'au', 'e', 'i', 'o', 'ou', 'u', 'y'];
+        
+        name1 = "";
+        name2 = "";
+        name3 = "";
+        name4 = "";
+
+        length1 = Math.floor(Math.random() * 3) + 2;
+        length2 = Math.floor(Math.random() * 3) + 2;
+        length3 = Math.floor(Math.random() * 3) + 2;
+        length4 = Math.floor(Math.random() * 3) + 2;
+
+        for (i = 0; i < length1; i++)
+            name1 +=(consonnants[Math.floor(Math.random()*consonnants.length)] + vowels[Math.floor(Math.random()*vowels.length)]);
+        name1 = name1.charAt(0).toUpperCase() + name1.slice(1);
+        for (i = 0; i < length2; i++)
+            name2 +=(consonnants[Math.floor(Math.random()*consonnants.length)] + vowels[Math.floor(Math.random()*vowels.length)]);
+        name2 = name2.charAt(0).toUpperCase() + name2.slice(1);
+        for (i = 0; i < length3; i++)
+            name3 +=(consonnants[Math.floor(Math.random()*consonnants.length)] + vowels[Math.floor(Math.random()*vowels.length)]);
+        name3 = name3.charAt(0).toUpperCase() + name3.slice(1);
+        for (i = 0; i < length4; i++)
+            name4 +=(consonnants[Math.floor(Math.random()*consonnants.length)] + vowels[Math.floor(Math.random()*vowels.length)]);
+        name4 = name4.charAt(0).toUpperCase() + name4.slice(1);
+        
+        document.getElementById("name1").innerHTML = name1;
+        document.getElementById("name2").innerHTML = name2;
+        document.getElementById("lname1").innerHTML = name3;
+        document.getElementById("lname2").innerHTML = name4; 
+    </script>
+    
+</body>
+</html>
